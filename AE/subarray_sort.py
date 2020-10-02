@@ -1,4 +1,4 @@
-
+# Type: Array, Two Pointers
 def subarray_sort(array):
     res = []
     left, right = 1, len(array)-2
