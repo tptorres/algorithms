@@ -2,7 +2,7 @@
 from heapq import *
 
 
-def carPooling(self, trips: List[List[int]], capacity: int) -> bool:
+def carPooling(trips: List[List[int]], capacity: int) -> bool:
     trips.sort(key=lambda trip: trip[1])
     minHeap = []
     current_capacity = 0

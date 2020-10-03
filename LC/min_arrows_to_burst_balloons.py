@@ -1,7 +1,7 @@
 # Type: Greedy, Interval
 
 
-def findMinArrowShots(self, points: List[List[int]]) -> int:
+def findMinArrowShots(points: List[List[int]]) -> int:
     if not points:
         return 0
     if len(points) == 1:
