@@ -36,17 +36,14 @@ def staircase_tabulation(n):
 
 
 def staircase_opt(n):
-    n1, n2, n3, temp = 1, 1, 2, 0
+    n1, n2, n3 = 1, 1, 2
     if n < 2:
         return n2
 
     for i in range(3, n+1):
-        temp = n1 + n2 + n3
-        n1 = n2
-        n2 = n3
-        n3 = temp
+        n1, n2, n3 = n2, n3, n1+n2+n3
 
     return n3
 
 
-print(staircase_opt(1))
+print(staircase_opt(5))
