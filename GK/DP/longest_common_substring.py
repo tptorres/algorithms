@@ -32,14 +32,14 @@ def LCS_tabulation(s1, s2):
 
 
 def LCS_tabulation_opt(s1, s2):
-    dp = [0 for _ in range(max(len(s1), len(s2))+1)]
+    dp = [0 for _ in range(len(s1)+1)]
     max_length = 0
 
-    for i in range(1, len(s1) + 1):
-        for j in range(1, len(s2)+1):
+    for i in range(1, len(s1)):
+        for j in range(len(s2), 0, -1):
             if s1[i-1] == s2[j-1]:
-                dp[j] = 1 + dp[j-1]
-                max_length = max(max_length, dp[j-1])
+                dp[j] = 1 + dp[-1]
+                max_length = max(max_length, dp[j])
 
     return max_length
 
